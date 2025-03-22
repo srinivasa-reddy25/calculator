@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.9.1/math.min.js"></script>
+
+</head>
+<body>
+    <div class="h-screen flex items-center justify-center bg-gray-100 ">
+        <div class="w-80 h-[500px] rounded-2xl shadow-2xl bg-[#000000] p-6 flex flex-col space-between">
+            <div id="resultContainer" class="text-right text-4xl text-white font-bold overflow-scroll">
+                <p class="bg-transparent w-full h-[70px] text-right text-4xl text-white font-bold " id="result"></p>
+                <!-- <input type="text" class="bg-transparent w-full h-[70px] text-right text-4xl text-white font-bold" id="result"> -->
+            </div>
+            <div id="buttonsContainer" class="self-center mt-auto">
+                <div class="grid grid-cols-4 grid-rows-5 gap-3 mt-4">
+                    <button id="clear" class="text-black bg-[#A5A5A5] rounded-full h-[60px] w-[60px] hover:bg-[#D9D9D9] active:bg-gray-800 transition-colors">AC</button>
+                    <button id="sqrt" class="text-black bg-[#A5A5A5] rounded-full h-[60px] w-[60px] hover:bg-[#D9D9D9] active:bg-gray-800 transition-colors">√</button>
+                    <button id="percent" class="text-black bg-[#A5A5A5] rounded-full h-[60px] w-[60px] hover:bg-[#D9D9D9] active:bg-gray-800 transition-colors">﹪</button>
+                    <button id="divide" class="text-white bg-[#F1A33B] rounded-full h-[60px] w-[60px] hover:bg-[#FAD9A5] active:bg-gray-800 transition-colors">/</button>
+
+                    <button id="num7" class="text-white bg-[#333333] rounded-full h-[60px] w-[60px] hover:bg-gray-600 active:bg-gray-800 transition-colors">7</button>
+                    <button id="num8" class="text-white bg-[#333333] rounded-full h-[60px] w-[60px] hover:bg-gray-600 active:bg-gray-800 transition-colors">8</button>
+                    <button id="num9" class="text-white bg-[#333333] rounded-full h-[60px] w-[60px] hover:bg-gray-600 active:bg-gray-800 transition-colors">9</button>
+                    <button id="multiply" class="text-white bg-[#F1A33B] rounded-full h-[60px] w-[60px] hover:bg-[#FAD9A5] active:bg-gray-800 transition-colors">X</button>
+
+                    <button id="num4" class="text-white bg-[#333333] rounded-full h-[60px] w-[60px] hover:bg-gray-600 active:bg-gray-800 transition-colors">4</button>
+                    <button id="num5" class="text-white bg-[#333333] rounded-full h-[60px] w-[60px] hover:bg-gray-600 active:bg-gray-800 transition-colors">5</button>
+                    <button id="num6" class="text-white bg-[#333333] rounded-full h-[60px] w-[60px] hover:bg-gray-600 active:bg-gray-800 transition-colors">6</button>
+                    <button id="subtract" class="text-white bg-[#F1A33B] rounded-full h-[60px] w-[60px] hover:bg-[#FAD9A5] active:bg-gray-800 transition-colors">－</button>
+
+                    <button id="num1" class="text-white bg-[#333333] rounded-full h-[60px] w-[60px] hover:bg-gray-600 active:bg-gray-800 transition-colors">1</button>
+                    <button id="num2" class="text-white bg-[#333333] rounded-full h-[60px] w-[60px] hover:bg-gray-600 active:bg-gray-800 transition-colors">2</button>
+                    <button id="num3" class="text-white bg-[#333333] rounded-full h-[60px] w-[60px] hover:bg-gray-600 active:bg-gray-800 transition-colors">3</button>
+                    <button id="add" class="text-white bg-[#F1A33B] rounded-full h-[60px] w-[60px] hover:bg-[#FAD9A5] active:bg-gray-800 transition-colors">+</button>
+
+                    <button id="plusMinus" class="text-white bg-[#333333] rounded-full h-[60px] w-[60px] hover:bg-gray-600 active:bg-gray-800 transition-colors">+/-</button>
+                    <button id="num0" class="text-white bg-[#333333] rounded-full h-[60px] w-[60px] hover:bg-gray-600 active:bg-gray-800 transition-colors">0</button>
+                    <button id="decimal" class="text-white bg-[#333333] rounded-full h-[60px] w-[60px] hover:bg-gray-600 active:bg-gray-800 transition-colors">.</button>
+                    <button id="equals" class="text-white bg-[#F1A33B] rounded-full h-[60px] w-[60px] hover:bg-[#FAD9A5] active:bg-gray-800 transition-colors">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
