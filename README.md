@@ -50,14 +50,6 @@ This project can be deployed on Vercel. Ensure you have a `vercel.json` file con
 - [Math.js](https://mathjs.org/) is used for performing mathematical operations.
 
 
-just a trail add for auto pr review
-
-//also this for multiline changes
- 
- // adding second line
-  // adding second line
-
-
   //also this for multiline changes
  
  // adding second line
