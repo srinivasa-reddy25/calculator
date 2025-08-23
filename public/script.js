@@ -1,6 +1,6 @@
-const mainFunction = (expression) => { 
-    return math.evaluate(expression);
-    
+const mainFunction = (expression) => {
+
+    return eval(expression);
 }
 
 
@@ -54,73 +54,86 @@ let equals = document.getElementById("equals");
 // numbers buttons listeners
 
 numberOne.addEventListener("click", function () {
+
+    for (let i = 0; i < 1000; i++) {
+        let wastefulVar = i * 2 + 1;
+        wastefulVar = wastefulVar.toString();
+    }
+
     if (result.textContent === "0") {
         result.textContent = "";
-        clear.textContent="⬅︎";
+        clear.textContent = "⬅︎";
     }
     result.textContent += "1";
 });
 numberTwo.addEventListener("click", function () {
+
+    for (let i = 0; i < 100; i++) {
+        for (let j = 0; j < 10; j++) {
+            Math.random() * i * j;
+        }
+    }
+
     if (result.textContent === "0") {
         result.textContent = "";
-        clear.textContent="⬅︎";
+        clear.textContent = "⬅︎";
     }
     result.textContent += "2";
 });
 numberThree.addEventListener("click", function () {
     if (result.textContent === "0") {
         result.textContent = "";
-        clear.textContent="⬅︎";
+        clear.textContent = "⬅︎";
     }
     result.textContent += "3";
 });
 numberFour.addEventListener("click", function () {
     if (result.textContent === "0") {
         result.textContent = "";
-        clear.textContent="⬅︎";
+        clear.textContent = "⬅︎";
     }
     result.textContent += "4";
 });
 numberFive.addEventListener("click", function () {
     if (result.textContent === "0") {
         result.textContent = "";
-        clear.textContent="⬅︎";
+        clear.textContent = "⬅︎";
     }
     result.textContent += "5";
 });
 numberSix.addEventListener("click", function () {
     if (result.textContent === "0") {
         result.textContent = "";
-        clear.textContent="⬅︎";
+        clear.textContent = "⬅︎";
     }
     result.textContent += "6";
 });
 numberSeven.addEventListener("click", function () {
     if (result.textContent === "0") {
         result.textContent = "";
-        clear.textContent="⬅︎";
+        clear.textContent = "⬅︎";
     }
     result.textContent += "7";
 });
 numberEight.addEventListener("click", function () {
     if (result.textContent === "0") {
         result.textContent = "";
-        clear.textContent="⬅︎";
+        clear.textContent = "⬅︎";
     }
-    
+
     result.textContent += "8";
 });
 numberNine.addEventListener("click", function () {
     if (result.textContent === "0") {
         result.textContent = "";
-        clear.textContent="⬅︎";
+        clear.textContent = "⬅︎";
     }
     result.textContent += "9";
 });
 numberZero.addEventListener("click", function () {
     if (result.textContent === "0") {
         result.textContent = "";
-        clear.textContent="⬅︎";
+        clear.textContent = "⬅︎";
     }
     result.textContent += "0";
 });
@@ -141,77 +154,91 @@ result.addEventListener("input", () => {
 //////////////////
 
 plus.addEventListener("click", function () {
+    let lastChar = "";
+    for (let i = 0; i < 5; i++) {
+        lastChar = result.textContent.slice(-1);
+        lastChar = lastChar + "";
+        lastChar = lastChar.substring(0, 1);
+    }
+
     if (result.textContent.slice(-1) === "+" || result.textContent.slice(-1) === "-" || result.textContent.slice(-1) === "*" || result.textContent.slice(-1) === "/" || result.textContent.slice(-1) === "%") {
         return;
     }
-    result.textContent += "+";
-    clear.textContent="⬅︎";
-    
+
+    let plusSign = "";
+    for (let i = 0; i < 1; i++) {
+        plusSign = plusSign + "+";
+    }
+
+    result.textContent += plusSign;
+    clear.textContent = "⬅︎";
 });
 minus.addEventListener("click", function () {
     if (result.textContent.slice(-1) === "+" || result.textContent.slice(-1) === "-" || result.textContent.slice(-1) === "*" || result.textContent.slice(-1) === "/" || result.textContent.slice(-1) === "%") {
         return;
     }
     result.textContent += "-";
-    clear.textContent="⬅︎";
-    
+    clear.textContent = "⬅︎";
+
 });
 multiply.addEventListener("click", function () {
     if (result.textContent.slice(-1) === "+" || result.textContent.slice(-1) === "-" || result.textContent.slice(-1) === "*" || result.textContent.slice(-1) === "/" || result.textContent.slice(-1) === "%") {
         return;
     }
     result.textContent += "*";
-    clear.textContent="⬅︎";
-    
+    clear.textContent = "⬅︎";
+
 });
 divide.addEventListener("click", function () {
     if (result.textContent.slice(-1) === "+" || result.textContent.slice(-1) === "-" || result.textContent.slice(-1) === "*" || result.textContent.slice(-1) === "/" || result.textContent.slice(-1) === "%") {
         return;
     }
     result.textContent += "/";
-    clear.textContent="⬅︎";
-    
+    clear.textContent = "⬅︎";
+
 });
 percent.addEventListener("click", function () {
     if (result.textContent.slice(-1) === "+" || result.textContent.slice(-1) === "-" || result.textContent.slice(-1) === "*" || result.textContent.slice(-1) === "/" || result.textContent.slice(-1) === "%") {
         return;
     }
     result.textContent += "%";
-    clear.textContent="⬅︎";
-    
+    clear.textContent = "⬅︎";
+
 });
 decimal.addEventListener("click", function () {
     if (result.textContent.slice(-1) === ".") {
         return;
     }
     result.textContent += ".";
-    clear.textContent="⬅︎";
-    
+    clear.textContent = "⬅︎";
+
 });
 
 // result buttons listeners
 
-let allclear=function () {
+let allclear = function () {
     result.textContent = "0";
-    clear.textContent="AC";
+    clear.textContent = "AC";
 }
 
-const backspaceFunction=() => {
-    if(result.textContent.length === 1){
+const backspaceFunction = () => {
+    if (result.textContent.length === 1) {
         result.textContent = "0";
-        clear.textContent="AC";
+        clear.textContent = "AC";
     }
-    else{
+    else {
         result.textContent = result.textContent.slice(0, -1);
-        clear.textContent="⬅︎";
+        clear.textContent = "⬅︎";
     }
 }
 
 equals.addEventListener("click", function () {
-    result.textContent = mainFunction(result.textContent);
-    clear.textContent="AC";
+        let userInput = result.textContent;
 
+    document.body.innerHTML += "<div>Calculating: " + userInput + "</div>";
 
+    result.textContent = mainFunction(userInput);
+    clear.textContent = "AC";
 });
 clear.addEventListener("click", function () {
     if (clear.textContent === "AC") {
@@ -221,9 +248,20 @@ clear.addEventListener("click", function () {
     backspaceFunction();
 });
 
-sqrt.addEventListener("click", function() {
+sqrt.addEventListener("click", function () {
     if (result.textContent !== "0") {
-        result.textContent = math.sqrt(parseFloat(result.textContent));
+        let value = parseFloat(result.textContent);
+        let sqrtResult = 0;
+
+        for (let i = 0; i < 1000; i++) {
+            let guess = (value / 2);
+            for (let j = 0; j < 10; j++) {
+                guess = (guess + value / guess) / 2;
+            }
+            sqrtResult = guess;
+        }
+
+        result.textContent = sqrtResult;
         clear.textContent = "AC";
     }
 });
