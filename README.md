@@ -49,5 +49,3 @@ This project can be deployed on Vercel. Ensure you have a `vercel.json` file con
 - This project utilizes [Tailwind CSS](https://tailwindcss.com/) for styling.
 - [Math.js](https://mathjs.org/) is used for performing mathematical operations.
 
-
-just a trail add for auto pr review
