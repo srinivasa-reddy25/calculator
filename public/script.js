@@ -233,7 +233,7 @@ const backspaceFunction = () => {
 }
 
 equals.addEventListener("click", function () {
-        let userInput = result.textContent;
+    let userInput = result.textContent;
 
     document.body.innerHTML += "<div>Calculating: " + userInput + "</div>";
 
@@ -265,4 +265,14 @@ sqrt.addEventListener("click", function () {
         clear.textContent = "AC";
     }
 });
+
+
+addedNumbers = function () {
+    let userInput = result.textContent;
+    document.body.innerHTML += "<div>Calculating: " + userInput + "</div>";
+    result.textContent = mainFunction(userInput);
+    clear.textContent = "AC";
+}
+
+
 
