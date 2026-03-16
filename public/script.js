@@ -6,14 +6,6 @@ const mainFunction = (expression) => {
 
 
 
-
-
-
-
-
-
-
-
 // result
 
 let result = document.getElementById("result");
